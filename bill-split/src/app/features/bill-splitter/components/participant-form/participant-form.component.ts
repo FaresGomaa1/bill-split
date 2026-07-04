@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Person } from '../../../../domain/models/person.model';
+import { StorageService } from '../../../../core/services/storage.service';
 
 @Component({
   selector: 'app-participant-form',
   templateUrl: './participant-form.component.html',
   styleUrls: ['./participant-form.component.css']
 })
-export class ParticipantFormComponent implements OnInit {
+export class ParticipantFormComponent {
+  participantName:string = '';
+  constructor(private storageService: StorageService) { }
+  addParticipant(): void {
 
-  constructor() { }
+    if (!this.participantName.trim()) {
+      return;
+    }
 
-  ngOnInit(): void {
+    const newParticipant = new Person(
+      this.participantName.trim(),
+      0
+    );
+
+    this.storageService.addNewUser(newParticipant);
+
+    // Clear the textbox
+    this.participantName = '';
   }
 
 }
