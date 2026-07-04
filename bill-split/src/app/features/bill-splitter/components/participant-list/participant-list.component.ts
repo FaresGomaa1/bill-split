@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../../../../core/services/storage.service';
+import { IPerson } from '../../../../domain/Interfaces/iperson';
 
 @Component({
   selector: 'app-participant-list',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./participant-list.component.css']
 })
 export class ParticipantListComponent implements OnInit {
-
-  constructor() { }
+  participantList: IPerson[] = [];
+  constructor(private storageService: StorageService) {}
 
   ngOnInit(): void {
+    this.storageService.participants$.subscribe(users => {
+      this.participantList = users;
+    });
   }
-
+  loadParticipants(): void {
+    this.participantList = this.storageService.getAllUsers();
+  }
+  removeParticipant(participant: IPerson): void {
+    this.storageService.deleteUser(participant.id);
+  }
 }

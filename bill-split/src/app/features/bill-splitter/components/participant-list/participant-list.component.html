@@ -1,21 +1,25 @@
 <div class="card-body">
 
-      <div class="d-flex flex-wrap gap-2">
+  <div class="card-body">
 
-        <!-- Angular Loop -->
+    <div class="d-flex flex-wrap gap-2">
 
-        <span class="badge-participant">
+      <span class="badge-participant"
+            *ngFor="let participant of participantList">
 
-          <i class="fa-solid fa-user text-primary opacity-75"></i>
+        <i class="fa-solid fa-user text-primary opacity-75"></i>
 
-          Alex
+        {{ participant.name }}
 
-          <button class="btn-close ms-2"
-                  style="font-size:.55rem">
-          </button>
+        <button class="btn-close ms-2"
+                (click) ="removeParticipant(participant)"
+                style="font-size:.55rem">
+        </button>
 
-        </span>
+      </span>
 
-      </div>
+    </div>
+
+  </div>
 
     </div>
