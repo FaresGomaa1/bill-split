@@ -1,1 +1,55 @@
-<p>item-form works!</p>
+<section id="expense-form" class="module-spacing">
+  <div class="card border-primary border-opacity-25">
+    <header class="card-header border-bottom-0 pt-4 pb-0 bg-transparent">
+      <h2 class="h5 mb-0 fw-bold d-flex align-items-center">
+        <span class="bg-primary-subtle text-primary rounded-circle p-2 me-2 d-inline-flex">
+          <i class="fa-solid fa-file-invoice-dollar fa-sm"></i>
+        </span>
+        Add Expense
+      </h2>
+    </header>
+    <div class="card-body">
+      <form aria-label="Expense Details Form">
+        <!-- Field: Description -->
+        <div class="mb-3">
+          <label for="expenseDesc" class="form-label fw-semibold small">Item Description</label>
+          <input type="text" class="form-control" id="expenseDesc" placeholder="e.g., Dinner at Luigi's, Uber">
+        </div>
+
+        <!-- Field: Amount -->
+        <div class="mb-4">
+          <label for="expenseAmount" class="form-label fw-semibold small">Total Amount</label>
+          <div class="input-group input-group-lg shadow-sm">
+            <span class="input-group-text bg-white border-end-0 text-muted"><i class="fa-solid fa-dollar-sign"></i></span>
+            <input type="number" class="form-control border-start-0 ps-0 fw-semibold" id="expenseAmount" placeholder="0.00" step="0.01">
+          </div>
+        </div>
+
+        <!-- Fieldset: Assignees -->
+        <fieldset class="mb-4 bg-light p-3 rounded-3 border">
+          <legend class="col-form-label h6 fw-semibold pt-0 mb-2 small text-muted">Select Who Shares This</legend>
+          <div class="d-flex flex-wrap gap-2">
+            <!-- Checkbox Group -->
+            <div>
+              <input type="checkbox" class="btn-check" id="split-alex" autocomplete="off" checked>
+              <label class="btn btn-outline-secondary rounded-pill px-3 py-1 transition-all text-sm" for="split-alex">Alex</label>
+            </div>
+            <div>
+              <input type="checkbox" class="btn-check" id="split-maria" autocomplete="off" checked>
+              <label class="btn btn-outline-secondary rounded-pill px-3 py-1 transition-all text-sm" for="split-maria">Maria</label>
+            </div>
+            <div>
+              <input type="checkbox" class="btn-check" id="split-sam" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill px-3 py-1 transition-all text-sm" for="split-sam">Sam</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Submit Action -->
+        <button type="button" class="btn btn-primary w-100 py-2 fw-bold transition-all shadow-sm">
+          <i class="fa-solid fa-plus-circle me-2"></i>Add to Ledger
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
