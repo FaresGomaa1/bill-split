@@ -9,6 +9,8 @@ import { ParticipantFormComponent } from './features/bill-splitter/components/pa
 import { ParticipantListComponent } from './features/bill-splitter/components/participant-list/participant-list.component';
 import { SummaryDashboardComponent } from './features/bill-splitter/components/summary-dashboard/summary-dashboard.component';
 import { CurrencyFormatPipe } from './shared/pipes/currency-format.pipe';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CurrencyFormatPipe } from './shared/pipes/currency-format.pipe';
     ParticipantFormComponent,
     ParticipantListComponent,
     SummaryDashboardComponent,
-    CurrencyFormatPipe
+    CurrencyFormatPipe,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

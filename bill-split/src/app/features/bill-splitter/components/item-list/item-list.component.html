@@ -1,1 +1,81 @@
-<p>item-list works!</p>
+<section id="items-ledger" class="module-spacing">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="h5 mb-0 fw-bold text-dark">
+      <i class="fa-solid fa-list-ul text-muted me-2"></i>Expense Ledger
+    </h2>
+    <span class="badge bg-light text-dark border px-2 py-1 shadow-sm">Total: $145.50</span>
+  </div>
+
+  <div class="card overflow-hidden">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0 text-nowrap">
+        <thead class="table-light text-muted small text-uppercase">
+          <tr>
+            <th scope="col" class="fw-semibold ps-4">Description</th>
+            <th scope="col" class="fw-semibold">Amount</th>
+            <th scope="col" class="fw-semibold">Split Between</th>
+            <th scope="col" class="text-end pe-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td class="ps-4 fw-semibold text-dark">Dinner at Luigi's</td>
+            <td class="text-secondary fw-medium">$85.50</td>
+            <td>
+              <div class="avatar-group">
+                <span class="avatar avatar-a" title="Alex">A</span>
+                <span class="avatar avatar-m" title="Maria">M</span>
+                <span class="avatar avatar-s" title="Sam">S</span>
+              </div>
+            </td>
+            <td class="text-end pe-4">
+              <button class="btn btn-link text-danger p-0 transition-all opacity-75 hover-opacity-100" aria-label="Delete item">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+          <!-- Row 2 -->
+          <tr>
+            <td class="ps-4 fw-semibold text-dark">Uber to Downtown</td>
+            <td class="text-secondary fw-medium">$25.00</td>
+            <td>
+              <div class="avatar-group">
+                <span class="avatar avatar-a" title="Alex">A</span>
+                <span class="avatar avatar-m" title="Maria">M</span>
+              </div>
+            </td>
+            <td class="text-end pe-4">
+              <button class="btn btn-link text-danger p-0 transition-all opacity-75 hover-opacity-100" aria-label="Delete item">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+          <!-- Row 3 -->
+          <tr>
+            <td class="ps-4 fw-semibold text-dark">Concert Tickets</td>
+            <td class="text-secondary fw-medium">$35.00</td>
+            <td>
+              <div class="avatar-group">
+                <span class="avatar avatar-s" title="Sam">S</span>
+              </div>
+            </td>
+            <td class="text-end pe-4">
+              <button class="btn btn-link text-danger p-0 transition-all opacity-75 hover-opacity-100" aria-label="Delete item">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- EMPTY STATE STRUCTURAL MOCKUP (Currently hidden with d-none for viewing populated state) -->
+    <!-- Angular integration note: Use *ngIf here -->
+    <div class="text-center py-5 d-none bg-light">
+      <i class="fa-solid fa-folder-open fa-3x text-muted opacity-25 mb-3"></i>
+      <p class="text-muted fw-medium mb-0">No expenses added yet.</p>
+      <p class="small text-muted">Fill out the form to start splitting your bill.</p>
+    </div>
+  </div>
+</section>
