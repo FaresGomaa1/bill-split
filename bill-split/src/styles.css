@@ -1,1 +1,145 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bs-primary: #4f46e5; /* Deep Indigo */
+  --bs-primary-rgb: 79, 70, 229;
+  --bs-body-bg: #f8f9fa;
+  --bs-body-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --card-radius: 1rem;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  color: #334155;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Elevation & Surface */
+.card {
+  border: none;
+  border-radius: var(--card-radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-header, .card-footer {
+  background-color: transparent;
+}
+
+/* Typography Hierarchies */
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+  .btn-primary:hover, .btn-primary:active {
+    background-color: #4338ca;
+    border-color: #4338ca;
+  }
+
+.bg-primary-subtle {
+  background-color: rgba(79, 70, 229, 0.08) !important;
+}
+
+/* Custom Interactive Components */
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Participant Badges */
+.badge-participant {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.875rem;
+  border-radius: 50rem;
+  background-color: #e0e7ff; /* Light Indigo */
+  color: #3730a3;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+}
+
+  .badge-participant:hover {
+    background-color: #c7d2fe;
+    transform: translateY(-1px);
+  }
+
+/* Share Toggles (btn-check customization) */
+.btn-check:checked + .btn-outline-secondary {
+  background-color: rgba(79, 70, 229, 0.1);
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  font-weight: 600;
+}
+
+.btn-outline-secondary {
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+  .btn-outline-secondary:hover {
+    background-color: #f1f5f9;
+    color: #334155;
+    border-color: #cbd5e1;
+  }
+
+/* Avatar Stack for Shared Items */
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-left: -10px;
+  background-color: #64748b; /* Default slate */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+  .avatar:first-child {
+    margin-left: 0;
+  }
+
+/* Specific Avatar Colors for Mockup */
+.avatar-a {
+  background-color: #4f46e5;
+}
+/* Indigo */
+.avatar-m {
+  background-color: #0d9488;
+}
+/* Teal */
+.avatar-s {
+  background-color: #db2777;
+}
+/* Pink */
+
+/* Table Adjustments */
+.table > :not(caption) > * > * {
+  padding: 1rem 1.25rem;
+}
+
+.table-hover > tbody > tr:hover > * {
+  background-color: rgba(79, 70, 229, 0.02);
+}
+
+/* Layout spacing */
+.module-spacing {
+  margin-bottom: 2rem;
+}
